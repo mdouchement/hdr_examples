@@ -78,7 +78,7 @@ func generateLDR() {
 
 // README.md
 // var endpoint = "" // dev
-var endpoint = "https://github.com/mdouchement/hdr_examples/" // prod
+var endpoint = "https://github.com/mdouchement/hdr_examples/blob/master/" // prod
 
 var readme = `# HDR Gallery Examples
 
