@@ -26,6 +26,8 @@ var entries = []struct {
 		Tonemapper: func(m hdr.Image) tmo.ToneMappingOperator { return tmo.NewLogarithmic(m) }},
 	{Input: "forest_path.hdr", Output: "forest_path-drago03.jpeg", Name: "Drago '03 (default)",
 		Tonemapper: func(m hdr.Image) tmo.ToneMappingOperator { return tmo.NewDefaultDrago03(m) }},
+	{Input: "forest_path.hdr", Output: "forest_path-durand.jpeg", Name: "Durand (default)",
+		Tonemapper: func(m hdr.Image) tmo.ToneMappingOperator { return tmo.NewDefaultDurand(m) }},
 	{Input: "forest_path.hdr", Output: "forest_path-reinhard05.jpeg", Name: "Reinhard '05 (default)",
 		Tonemapper: func(m hdr.Image) tmo.ToneMappingOperator { return tmo.NewDefaultReinhard05(m) }},
 	{Input: "forest_path.hdr", Output: "forest_path-custom_reinhard05.jpeg", Name: "Custom Reinhard '05 (default)",
@@ -39,6 +41,8 @@ var entries = []struct {
 		Tonemapper: func(m hdr.Image) tmo.ToneMappingOperator { return tmo.NewLogarithmic(m) }},
 	{Input: "memorial_o876.hdr", Output: "memorial_o876-drago03.jpeg", Name: "Drago '03 (default)",
 		Tonemapper: func(m hdr.Image) tmo.ToneMappingOperator { return tmo.NewDefaultDrago03(m) }},
+	{Input: "memorial_o876.hdr", Output: "memorial_o876-durand.jpeg", Name: "Durand (default)",
+		Tonemapper: func(m hdr.Image) tmo.ToneMappingOperator { return tmo.NewDefaultDurand(m) }},
 	{Input: "memorial_o876.hdr", Output: "memorial_o876-reinhard05.jpeg", Name: "Reinhard '05 (default)",
 		Tonemapper: func(m hdr.Image) tmo.ToneMappingOperator { return tmo.NewDefaultReinhard05(m) }},
 	{Input: "memorial_o876.hdr", Output: "memorial_o876-custom_reinhard05.jpeg", Name: "Custom Reinhard '05 (default)",
@@ -77,8 +81,8 @@ func generateLDR() {
 }
 
 // README.md
-// var endpoint = "" // dev
-var endpoint = "https://github.com/mdouchement/hdr_examples/blob/master/" // prod
+var endpoint = "" // dev
+// var endpoint = "https://github.com/mdouchement/hdr_examples/blob/master/" // prod
 
 var readme = `# HDR Gallery Examples
 
