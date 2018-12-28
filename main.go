@@ -8,7 +8,7 @@ import (
 	"os"
 
 	"github.com/mdouchement/hdr"
-	_ "github.com/mdouchement/hdr/rgbe"
+	_ "github.com/mdouchement/hdr/codec/rgbe"
 	"github.com/mdouchement/hdr/tmo"
 )
 
